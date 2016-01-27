@@ -1,5 +1,5 @@
 # Stable version of etherpad doesn't support npm 2
-FROM tvelocity:etherpad
+FROM tvelocity/etherpad-lite
 MAINTAINER Santiago Saavedra <ssaavedra@gpul.org>
 
 COPY entrypoint.sh /entrypoint.sh
