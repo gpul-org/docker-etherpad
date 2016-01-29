@@ -104,7 +104,7 @@ if [ ! -f settings.json ]; then
 				    },
 				EOF
 			done
-			echo "  }," >> settings.json
+			echo "  }" >> settings.json
 	
 	elif [ $ETHERPAD_ADMIN_PASSWORD ]; then
 		: ${ETHERPAD_ADMIN_HASHEDPASSWORD:=$(
@@ -120,7 +120,7 @@ if [ ! -f settings.json ]; then
 		      "hash": "${ETHERPAD_ADMIN_HASHEDPASSWORD}",
 		      "is_admin": true
 		    }
-		  },
+		  }
 		EOF
 	fi
 
