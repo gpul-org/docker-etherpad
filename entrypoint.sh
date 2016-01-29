@@ -42,7 +42,7 @@ fi
 # 	mysql -u${ETHERPAD_DB_USER} -p${ETHERPAD_DB_PASSWORD} -hmysql \
 # 	      -e "create database ${ETHERPAD_DB_NAME}"
 # fi
-echo npm install ep_hash_auth
+npm install ep_hash_auth
 
 if [ ! -f settings.json ]; then
 
@@ -65,7 +65,7 @@ if [ ! -f settings.json ]; then
 	if [ $ETHERPAD_PLUGINS ]; then
 		for plugin in $(echo "${ETHERPAD_PLUGINS//,/
 }"); do
-			[ -d node_modules/$plugin ] || echo npm install $plugin
+			[ -d node_modules/$plugin ] || npm install $plugin
 
 			VARNAME=$(echo $plugin | tr '[[:lower:]]' '[[:upper:]]')
 			VARNAME="${VARNAME}_CONFIG"
